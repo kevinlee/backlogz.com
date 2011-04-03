@@ -1,0 +1,38 @@
+2011/04/03 12:17:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'backlogz.com.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in D:\Projects\backlogz.com\index.php (13)
+2011/04/03 12:17:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'backlogz.com.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in D:\Projects\backlogz.com\index.php (13)
+2011/04/03 12:17:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'backlogz.com.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in D:\Projects\backlogz.com\index.php (13)
+2011/04/03 12:17:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'backlogz.com.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in D:\Projects\backlogz.com\index.php (13)
+2011/04/03 12:17:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'backlogz.com.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in D:\Projects\backlogz.com\index.php (13)
+2011/04/03 12:54:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\Projects\yii-1.1.7.r3135\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 D:\Projects\yii-1.1.7.r3135\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 D:\Projects\yii-1.1.7.r3135\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 D:\Projects\backlogz.com\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/index.php?r=user/admin
+2011/04/03 17:19:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\Projects\yii-1.1.7.r3135\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 D:\Projects\yii-1.1.7.r3135\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(121): CWebApplication->runController('backlog/admin')
+#9 D:\Projects\yii-1.1.7.r3135\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 D:\Projects\backlogz.com\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/index.php?r=backlog/admin
