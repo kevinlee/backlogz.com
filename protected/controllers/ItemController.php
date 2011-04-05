@@ -8,6 +8,11 @@ class ItemController extends Controller
 	 */
 	public $layout='//layouts/column2';
 
+    /**
+     * @var private property containing the associated Backlog model instance
+     */
+    private $_backlog = null;
+
 	/**
 	 * @return array action filters
 	 */
@@ -15,6 +20,7 @@ class ItemController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
+            'backlogContext + create', // check to ensure valid backlog context
 		);
 	}
 
@@ -62,6 +68,7 @@ class ItemController extends Controller
 	public function actionCreate()
 	{
 		$model=new Item;
+        $model->backlog_id = $this->_backlog->id;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -173,4 +180,47 @@ class ItemController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+    /**
+     * Protected method to load the associated Backlog model class
+     * @throws CHttpException if Backlog specified does not exist
+     * @param  $backlog_id the primary identifier of the associated Backlog
+     * @return object the Backlog data model based on the primary key
+     */
+    protected function loadBacklog($backlogId)
+    {
+        // if the backlog property is null, create is based on input id
+        if ($this->_backlog === null)
+        {
+            $this->_backlog = Backlog::model()->findbyPk($backlogId);
+            if ($this->_backlog === null)
+            {
+                throw new CHttpException(404, 'The requested backlog does not exist');
+            }
+        }
+
+        return $this->_backlog;
+    }
+
+    /**
+     * In-class defined filter method, configured for use in the above filters() method
+     * It is called before the actionCreate() action method is run in order to ensure a proper backlog context
+     * @param  filterChain
+     */
+    public function filterBacklogContext($filterChain)
+    {
+        // set the project identifier based on either the GET it POST input
+        // request variables, since we allow both types
+        $backlogId = null;
+        if (isset($_GET['bid']))
+            $backlogId = $_GET['bid'];
+        else
+            if (isset($_POST['bid']))
+                $backlogId = $_POST['bid'];
+
+        $this->loadBacklog($backlogId);
+
+        // complete the running of other filters and execute the requested action.
+        $filterChain->run();
+    }
 }

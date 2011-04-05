@@ -34,9 +34,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'backlog_id'); ?>
-		<?php echo $form->textField($model,'backlog_id'); ?>
-		<?php echo $form->error($model,'backlog_id'); ?>
+		<?php echo $form->hiddenField($model,'backlog_id'); ?>
 	</div>
 
 	<div class="row">

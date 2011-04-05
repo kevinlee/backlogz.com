@@ -36,3 +36,81 @@ Stack trace:
 #9 D:\Projects\yii-1.1.7.r3135\framework\base\CApplication.php(155): CWebApplication->processRequest()
 #10 D:\Projects\backlogz.com\index.php(13): CApplication->run()
 #11 {main} REQUEST_URI=/index.php?r=backlog/admin
+2011/04/05 11:08:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in D:\Projects\yii-1.1.7.r3135\framework\web\CController.php:477
+Stack trace:
+#0 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(262): CController->missingAction('list')
+#1 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(328): CController->run('list')
+#2 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(121): CWebApplication->runController('item/list')
+#3 D:\Projects\yii-1.1.7.r3135\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#4 D:\Projects\backlogz.com\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=item/list
+2011/04/05 11:14:08 [error] [php] Undefined variable: model (D:\Projects\backlogz.com\protected\views\backlog\index.php:9)
+Stack trace:
+#0 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(866): BacklogController->renderFile()
+#1 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(779): BacklogController->renderPartial()
+#2 D:\Projects\backlogz.com\protected\controllers\BacklogController.php(133): BacklogController->render()
+#3 D:\Projects\yii-1.1.7.r3135\framework\web\actions\CInlineAction.php(50): BacklogController->actionIndex()
+#4 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(300): CInlineAction->runWithParams()
+#5 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilterChain.php(133): BacklogController->runAction()
+#6 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(1122): CAccessControlFilter->filter()
+#8 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CInlineFilter.php(59): BacklogController->filterAccessControl()
+#9 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(283): CFilterChain->run()
+#11 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(257): BacklogController->runActionWithFilters()
+#12 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(328): BacklogController->run()
+#13 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#14 D:\Projects\yii-1.1.7.r3135\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#15 D:\Projects\backlogz.com\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=backlog
+in D:\Projects\backlogz.com\protected\views\backlog\index.php (9)
+in D:\Projects\backlogz.com\protected\controllers\BacklogController.php (133)
+in D:\Projects\backlogz.com\index.php (13)
+2011/04/05 11:20:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested backlog does not exist' in D:\Projects\backlogz.com\protected\controllers\ItemController.php:198
+Stack trace:
+#0 D:\Projects\backlogz.com\protected\controllers\ItemController.php(221): ItemController->loadBacklog(NULL)
+#1 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CInlineFilter.php(59): ItemController->filterBacklogContext(Object(CFilterChain))
+#2 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#3 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#5 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(283): CFilterChain->run()
+#8 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(328): CController->run('create')
+#10 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(121): CWebApplication->runController('item/create')
+#11 D:\Projects\yii-1.1.7.r3135\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#12 D:\Projects\backlogz.com\index.php(13): CApplication->run()
+#13 {main} REQUEST_URI=/index.php?r=item/create&pid=1
+2011/04/05 11:20:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested backlog does not exist' in D:\Projects\backlogz.com\protected\controllers\ItemController.php:198
+Stack trace:
+#0 D:\Projects\backlogz.com\protected\controllers\ItemController.php(221): ItemController->loadBacklog(NULL)
+#1 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CInlineFilter.php(59): ItemController->filterBacklogContext(Object(CFilterChain))
+#2 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#3 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#5 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(283): CFilterChain->run()
+#8 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(328): CController->run('create')
+#10 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(121): CWebApplication->runController('item/create')
+#11 D:\Projects\yii-1.1.7.r3135\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#12 D:\Projects\backlogz.com\index.php(13): CApplication->run()
+#13 {main} REQUEST_URI=/index.php?r=item/create&pid=1
+2011/04/05 11:20:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested backlog does not exist' in D:\Projects\backlogz.com\protected\controllers\ItemController.php:198
+Stack trace:
+#0 D:\Projects\backlogz.com\protected\controllers\ItemController.php(221): ItemController->loadBacklog(NULL)
+#1 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CInlineFilter.php(59): ItemController->filterBacklogContext(Object(CFilterChain))
+#2 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#3 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#5 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\Projects\yii-1.1.7.r3135\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(283): CFilterChain->run()
+#8 D:\Projects\yii-1.1.7.r3135\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(328): CController->run('create')
+#10 D:\Projects\yii-1.1.7.r3135\framework\web\CWebApplication.php(121): CWebApplication->runController('item/create')
+#11 D:\Projects\yii-1.1.7.r3135\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#12 D:\Projects\backlogz.com\index.php(13): CApplication->run()
+#13 {main} REQUEST_URI=/index.php?r=item/create&pid=1

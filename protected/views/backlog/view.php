@@ -9,6 +9,7 @@ $this->menu=array(
 	array('label'=>'Create Backlog', 'url'=>array('create')),
 	array('label'=>'Update Backlog', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete Backlog', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+    array('label'=>'Create Backlog Item', 'url'=>array('item/create', 'bid'=>$model->id)),
 	array('label'=>'Manage Backlog', 'url'=>array('admin')),
 );
 ?>
